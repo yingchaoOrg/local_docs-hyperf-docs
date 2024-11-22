@@ -6,7 +6,7 @@ services:
     privileged: false
     container_name: local-docs-hyperf-docs
     volumes:
-      - ./docs:/usr/share/nginx/html/master
+      - .:/usr/share/nginx/html/
     tty: true
     ports:
       - 34805:80
