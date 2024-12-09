@@ -237,11 +237,8 @@ use Hyperf\Metric\Contract\MetricFactoryInterface;
 
 class IndexController extends AbstractController
 {
-    /**
-     * @var MetricFactoryInterface
-     */
     #[Inject]
-    private $metricFactory;
+    private MetricFactoryInterface $metricFactory;
 
     public function create(Order $order)
     {
@@ -403,7 +400,7 @@ Router::get('/metrics', function(){
 
 > This section only applies to Prometheus drivers
 
-If you have default metrics enabled, `Hyperf/Metric` prepares a Grafana console for you out of the box. Download the console [json file](https:https://cdn.docs.yingchao.fun/gh/hyperf/hyperf/src/metric/grafana.json), import it into Grafana and use it.
+If you have default metrics enabled, `Hyperf/Metric` prepares a Grafana console for you out of the box. Download the console [json file](https://cdn.jsdelivr.net/gh/hyperf/hyperf/src/metric/grafana.json), import it into Grafana and use it.
 
 ![grafana](imgs/grafana.png)
 

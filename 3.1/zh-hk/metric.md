@@ -239,11 +239,8 @@ use Hyperf\Metric\Contract\MetricFactoryInterface;
 
 class IndexController extends AbstractController
 {
-    /**
-     * @var MetricFactoryInterface
-     */
     #[Inject]
-    private $metricFactory;
+    private MetricFactoryInterface $metricFactory;
 
     public function create(Order $order)
     {
@@ -405,7 +402,7 @@ Router::get('/metrics', function(){
 
 > 本節只適用於 Prometheus 驅動
 
-如果您啓用了默認指標，`Hyperf/Metric` 為您準備了一個開箱即用的 Grafana 控制枱。下載控制枱 [json 文件](https:https://cdn.docs.yingchao.fun/gh/hyperf/hyperf/src/metric/grafana.json)，導入 Grafana 中即可使用。
+如果您啓用了默認指標，`Hyperf/Metric` 為您準備了一個開箱即用的 Grafana 控制枱。下載控制枱 [json 文件](https://cdn.jsdelivr.net/gh/hyperf/hyperf/src/metric/grafana.json)，導入 Grafana 中即可使用。
 
 ![grafana](imgs/grafana.png)
 
